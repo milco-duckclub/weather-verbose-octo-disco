@@ -22,6 +22,7 @@ def load_weather_data():
     temperatures = 20 + 10 * np.sin(np.linspace(0, 3 * np.pi, len(dates))) + np.random.normal(0, 1, len(dates))
     return pd.DataFrame({'Date': dates, 'Temperature': temperatures})
 
+
 # Load the data
 weather_data = load_weather_data()
 
@@ -66,3 +67,4 @@ future_temps_df = pd.DataFrame({'Month': range(1, 13), 'Predicted Temperature': 
 
 st.subheader("Predicted Future Temperatures for Lafayette, CA")
 st.table(future_temps_df)
+
